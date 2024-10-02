@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lovegram</title> 
+    <link rel="icon" href="icon.png">
+
+    <link rel="stylesheet" href="./sass/vender/bootstrap.min.css">
+   
+
+    
+    <link rel="stylesheet" href="./sass/main.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="login">
+            <div class="content">
+                <div class="log-on border_insc">
+                       <div class="logo">
+                        <img src="icon.png" style="width:140px;">
+                        <img src="./images/logo.jpg" alt="Instagram logo">
+                       </div>
+                    <form>
+                        <div>
+                            <input type="username" name="username" id="username" placeholder="username">
+                        </div>
+                        <div>
+                            <input type="password" name="password" id="password" placeholder="password">
+                            <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                        </div>
+                        
+                        <input type="submit" value="Login">
+                    </form>
+                        
+                    </a>
+                    <div class="other-ways">
+                        <div class="seperator">
+                            <span class="ligne"></span>
+                            <span class="ou">OR</span>
+                            <span class="ligne"></span>
+                        </div>
+                        <div class="facebook-connection">
+                        
+                                <img src="./images/lovebook.png" alt="facebook icon">
+                                Log in with Lovebook
+    
+                        </div>
+                        <div class="forget-password">
+                            <p id="demo"> Forgot password?</p>
+                              
+                        
+                        </div>
+                    </div>
+                </div>
+                <div class="sing-up border_insc">
+                    <p>
+                        You have an account? 
+                        <a href="index.html">Log in</a>
+                    </p>
+                </div>
+                <div class="download">
+                    <p>Get the app.</p>
+                    <div>
+                        <img src="./images/google_play_icon.png" alt="download app from google play">
+                        <img src="./images/microsoft-icon.png" alt="download app from microsoft">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+       
+   
+</body>
+<script type="text/javascript">
+    document.getElementById("demo").onclick = function() {myFunction()};
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Ithaiyum Marandhutiya🤨";
+}
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // prevent default form submission behavior
+
+        // validate username and password
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        if (username === 'Aishwarya' && password === 'wedsRajesh') {
+            location.href = "home.html";          
+        } else {
+            alert("Incorrect username or password")
+           
+        }
+    });
+</script>
+<style>
+    input[type="submit"] {
+            margin: 10px 0 0 0;
+            padding: 4px 100px;
+            background-color: rgb(0, 149, 246);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+    }
+    .forget-password{
+color: rgb(61, 42, 165);
+    }
+</style>
+</html>
