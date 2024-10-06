@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lovegram</title>
+    <link rel="icon" href="icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./sass/vender/bootstrap.css">
+    <link rel="stylesheet" href="./sass/vender/bootstrap.min.css">
+    <link rel="stylesheet" href="./owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.css">
+    <link rel="stylesheet" href="./sass/main.css">
+    <style>
+        /* Custom styles for mobile responsiveness */
+        @media (max-width: 640px) {
+            body {
+                font-size: 0.875rem; /* Smaller font size */
+            }
+            .max-w-md {
+                width: 100%; /* Full width on mobile */
+                border-radius: 0; /* Remove rounded corners */
+            }
+            .p-4 {
+                padding: 2rem; /* Adjust padding for mobile */
+            }
+            .text-xl {
+                font-size: 0.875rem; /* Slightly smaller title */
+            }
+            .bg-gray-200 {
+                padding: 0.5rem 1rem; /* Adjust button padding */
+            }
+            .w-10 {
+                width: 2.5rem; /* Adjust image size */
+                height: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <div class="max-w-md mx-auto bg-white shadow-md rounded-lg">
+        <div class="flex items-center justify-between p-4 border-b">
+            <a href="profile.html">
+            <i class="fas fa-arrow-left text-xl"></i></a>
+            <h1 class="text-xl font-semibold">Followers</h1>
+            <div></div>
+        </div>
+        <div class="p-4">
+            <div class="relative mb-4">
+                <input id="searchInput" class="w-full px-4 py-2 border rounded-full bg-gray-200 focus:outline-none" placeholder="Search" type="text" oninput="filterFollowers()"/>
+                <i class="fas fa-search absolute top-3 right-4 text-gray-400"></i>
+            </div>
+            <div id="followerList" class="space-y-4">
+                <!-- Follower Item Template -->
+                <div class="flex items-center justify-between py-2">
+                    <div class="flex items-center space-x-4">
+                        <img alt="Profile picture" class="w-10 h-10 rounded-full" src="aira.jpg"/>
+                        <div class="ml-4">
+                            <div class="font-semibold">princess_aira</div>
+                            <div class="text-gray-500 text-sm">Zara</div>
+                        </div>
+                    </div>
+                    <button class="bg-gray-200 text-black px-2 py-1 rounded">Remove</button>
+                </div>
+                <!-- Hidden Follower Item -->
+                <div class="flex items-center justify-between hidden" id="rajeshFollower">
+                    <div class="flex items-center space-x-4">
+                        <img alt="Profile picture" class="w-10 h-10 rounded-full" src="pic12.jpg"/>
+                        <div>
+                            <div class="font-semibold">prince_rajesh<span class="text-blue-500 text-sm"></span></div>
+                            <div class="text-gray-500 text-sm">her prince</div>
+                        </div>
+                    </div>
+                    <button class="bg-gray-200 text-black px-1 py-1 rounded">Na Iruken</button>
+                </div>
+                <!-- Other Followers -->
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <img alt="Profile picture" class="w-10 h-10 rounded-full" src="varshini.jpg"/>
+                        <div>
+                            <div class="font-semibold">vxrshx_10<span class="text-blue-500 text-sm"></span></div>
+                            <div class="text-gray-500 text-sm">வர்ஷினி 🧸</div>
+                        </div>
+                    </div>
+                    <button class="bg-gray-200 text-black px-2 py-1 rounded">Remove</button>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <img alt="Profile picture" class="w-10 h-10 rounded-full" src="sona.jpg"/>
+                        <div>
+                            <div class="font-semibold"> _sona.23<span class="text-blue-500 text-sm"></span></div>
+                            <div class="text-gray-500 text-sm">ѕσηα❤😻🎀</div>
+                        </div>
+                    </div>
+                    <button class="bg-gray-200 text-black px-2 py-1 rounded">Remove</button>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <img alt="Profile picture" class="w-10 h-10 rounded-full" src="raguvengat.jpg"/>
+                        <div>
+                            <div class="font-semibold">raguvenkat.26<span class="text-blue-500 text-sm"></span></div>
+                            <div class="text-gray-500 text-sm"></div>
+                        </div>
+                    </div>
+                    <button class="bg-gray-200 text-black px-2 py-1 rounded">Remove</button>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <img alt="Profile picture" class="w-10 h-10 rounded-full" src="krishna.jpg"/>
+                        <div>
+                            <div class="font-semibold">lord_krishna<span class="text-blue-500 text-sm"></span></div>
+                            <div class="text-gray-500 text-sm">i'm there for you✨</div>
+                        </div>
+                    </div>
+                    <button class="bg-gray-200 text-black px-2 py-1 rounded">Remove</button>
+                </div>
+                <!-- Repeat similar blocks for other followers -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterFollowers() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const rajeshFollower = document.getElementById('rajeshFollower');
+            
+            if (searchInput === 'rajesh') {
+                rajeshFollower.classList.remove('hidden');
+            } else {
+                rajeshFollower.classList.add('hidden');
+            }
+        }
+    </script>
+
+    <div class="nav_menu">
+        <div class="fix_top">
+            <!-- nav for big->medium screen -->
+            <div class="nav">
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a class="active" href="home.html">
+                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2053557/home-icon.png">
+                                <span class="d-none d-lg-block ">Home</span>
+                            </a>
+                        </li>
+                        <li id="search_icon">
+                            <a href="#">
+                                <img src="./images/search.png">
+                                <span class="d-none d-lg-block search">Search </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#create_modal">
+                                <img src="./images/tab.png">
+                                <span class="d-none d-lg-block ">Create</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./explore.html">
+                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2053557/search-icon.png">
+                                <span class="d-none d-lg-block ">Explore</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./reels.html">
+                                <img src="./images/video.png">
+                                <span class="d-none d-lg-block ">Reels</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./messages.html">
+                                <img src="./images/send.png">
+                                <span class="d-none d-lg-block ">Messages</span>
+                            </a>
+                        </li>
+                        <li class="notification_icon">
+                            <a href="#">
+                                <img src="./images/love.png">
+                                <span class="d-none d-lg-block ">Notifications</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./profile.html">
+                                <img class="circle story" src="./images/logo_menu.jpg">
+                                <span class="d-none d-lg-block ">Profile</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- menu in the bottom for small screen  -->
+        <div class="nav_bottom">
+            <a href="./home.html"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2053557/home-icon.png"></a>
+            <a href="./explore.html"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2053557/search-icon.png"></a>
+            <a href="./reels.html"><img src="./images/video.png"></a>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#create_modal"><img src="./images/tab.png"></a>
+            <a href="profile.html"><img class="circle story" src="pic12.jpg"></a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .header, .footer {
+            padding: 1rem;
+            border-color: #4B5563;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            border-bottom-width: 1px;
+        }
+        .header img {
+            border-radius: 9999px;
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+        .header .title {
+            margin-left: 1rem;
+            flex: 1;
+        }
+        .header .title h1 {
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+        .header .icons {
+            display: flex;
+            gap: 1rem;
+        }
+        .header .icons i {
+            font-size: 1.25rem;
+        }
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+        }
+        .profile img {
+            border-radius: 9999px;
+            width: 5rem;
+            height: 5rem;
+        }
+        .profile h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+        .profile p {
+            color: #9CA3AF;
+        }
+        .profile button {
+            background-color: #e3e3e3;
+            color: rgb(0, 0, 0);
+            padding: 0.5rem 1rem;
+            border-radius: 9px;
+            margin-top: 0.5rem;
+        }
+        .messages {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            gap: 1rem;
+            overflow-y: auto;
+            flex: 1;
+        }
+        .messages p {
+            color: #9CA3AF;
+            text-align: center;
+        }
+        .content p {
+            color: #000000;
+            text-align: center;
+        }
+        .message {
+            display: flex;
+            align-items: start;
+            gap: 0.5rem;
+        }
+        .message img {
+            border-radius: 9999px;
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+        .message .content {
+            background-color: #eaeaea;
+            padding: 0.75rem;
+            border-radius: 30px;
+        }
+        .message .content p {
+            margin: 0;
+        }
+        .message.sent {
+            justify-content: flex-end;
+        }
+        .message.sent .content {
+            background-color: #2581eb;
+            color: white;
+        }
+        .footer {
+            display: flex;
+            align-items: center;
+            border-top-width: 0;
+            padding: 0.5rem;
+            background-color: #f0f0f0;
+            border-radius: 50px;
+            width: 380px;
+            margin-bottom: 45px;
+            margin-left: 16px;
+        }
+        .footer input {
+            flex: 1;
+            background-color: #f0f0f0;
+            color: black;
+            padding: 0.5rem 9px;
+            border-radius: 0.375rem;
+            margin-left: 0.5rem;
+        }
+        .footer .icons {
+            display: flex;
+            gap: 1rem;
+            margin-left: 1rem;
+        }
+        .footer .icons i {
+            font-size: 1.25rem;
+        }
+        /* GIF Popup Styles */
+        .gif-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            border-radius: 10px;
+            padding: 1rem;
+            width: 460px;
+        }
+        .gif-popup img {
+            width: 400px;
+        }
+        /* Overlay Styles */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(11, 11, 11, 0.7);
+            z-index: 999;
+        }
+        .profile-modal-content {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    width: 300px;
+}
+
+        /* Waveform Styles */
+        .waveform {
+            display: flex;
+            align-items: flex-end;
+            margin-top: 0.5rem;
+            height: 30px;
+            gap: 2px;
+        }
+        .waveform div {
+            width: 5px;
+            background-color: gray;
+            transition: background-color 0.1s;
+        }
+        .waveform div.active {
+            background-color: black;
+        }
+        .play-btn {
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+  <!-- User Profile Modal -->
+<div class="overlay" id="profileOverlay" style="display: none;"></div>
+<div class="gif-popup" id="profilePopup" style="display: none;">
+    <div class="profile-modal-content">
+        <img src="pic12.jpg" alt="Profile picture" style="width: 100px; border-radius: 50%;">
+        <h2>prince_rajesh</h2>
+        <p>Lovegram</p>
+        <p>Additional details here...</p>
+        <button onclick="closeProfilePopup()">Close</button>
+    </div>
+</div>
+
+    <div class="header">
+        <a href="messages.html">
+        <i class="fas fa-arrow-left text-xl"></i></a>
+        <img src="pic12.jpg" alt="Profile picture" style="margin-left: 13px;">
+        <div class="title">
+            <h1>prince_rajesh</h1>
+            <h3 style="color: #aeadad;">her prince</h3>
+        </div>
+        <div class="icons">
+            <i class="fas fa-phone"></i>
+            <i class="fas fa-video"></i>
+            <i class="fas fa-info-circle"></i>
+        </div>
+    </div>
+    <div class="profile">
+        <img src="pic12.jpg" alt="Profile picture"/>
+        <h2>prince_rajesh</h2>
+        <p>Lovegram</p>
+        <button>View Profile</button>
+    </div>
+    <div class="messages" id="messages">
+        <p>12 Aug, 2030, 4:45 PM</p>
+        <div class="message">
+            <img src="pic12.jpg" alt="Profile picture"/>
+            <div class="content">
+                <p>Chellam work over ma</p>
+            </div>
+        </div>
+        <div class="message sent">
+            <div class="content">
+                <p1>Okay,seekarama kelambidu chellam🤗</p1>
+            </div>
+        </div>
+        <div class="message">
+            <img src="pic12.jpg" alt="Profile picture"/>
+            <div class="content">
+                <p1>Okay ma🥰</p1>
+            </div>
+        </div>
+        <div class="message">
+          <img src="pic12.jpg" alt="Profile picture"/>
+          <div class="content">
+              <p1>Lunch super ah panniruntha chellam😘</p1>
+          </div>
+      </div>
+        <div class="message sent">
+          <div class="content">
+              <p1>🥰🥰🥰seekarama vaada dei🤨🤨</p1>
+          </div>
+      </div>
+      <div class="message">
+        <img src="pic12.jpg" alt="Profile picture"/>
+        <div class="content">
+            <p1>Achoo,chellam itho vanthutenda varapa unakum aira kum butter biscut um icecream um vaangitu varen💗</p1>
+        </div>
+    </div>
+    </div>
+    <div class="footer">
+        <img src="camera (1).png" style="width: 30px;">
+        <input type="text" id="messageInput" placeholder="Message.....">
+        <div class="icons">
+            <i class="fas fa-microphone"></i>
+            <i class="fas fa-image"></i>
+            <i class="fas fa-heart"></i>
+        </div>
+    </div>
+  
+    <div class="overlay" id="overlay"></div>
+    <div class="gif-popup" id="gifPopup">
+        <img src="hug.gif" alt="GIF">
+    </div>
+  
+    <script>
+        const inputField = document.getElementById('messageInput');
+        const messagesContainer = document.getElementById('messages');
+        const gifPopup = document.getElementById('gifPopup');
+        const overlay = document.getElementById('overlay');
+        let audio = new Audio('path_to_your_audio_file.mp3'); // Replace with your audio file path
+
+        inputField.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter' && inputField.value.trim() !== '') {
+                const userMessage = inputField.value.trim();
+                addMessage(userMessage, 'sent');
+                inputField.value = '';
+
+                if (userMessage.includes('ar')) {
+                    triggerVoiceNote();
+                } else if (userMessage.toLowerCase() === 'love you','loveyou','Love you','LOVE YOU','LOVEYOU','love you🥰','love you💗','love you❤️','love you😘','love you🤗','Love you🥰','Love you💗','Love you❤️','Love you😘','Love you🤗') {
+                    addTypingMessage();
+                }
+            }
+        });
+
+        function addTypingMessage() {
+            const typingMessage = document.createElement('div');
+            typingMessage.className = 'message';
+            typingMessage.innerHTML = `<div class="content"><p style="color:black;">Typing...</p></div>`;
+            messagesContainer.appendChild(typingMessage);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight; // Scroll to the bottom
+
+            setTimeout(() => {
+                messagesContainer.removeChild(typingMessage);
+                addMessage('Love you too di pondati💗😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘🫂', 'received');
+            }, 2000); // 4 second delay
+        }
+
+        function addMessage(text, type) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}`;
+            if (type === 'sent') {
+                messageDiv.innerHTML = `<div class="content"><p style="color:white;">${text}</p></div>`;
+            } else {
+                messageDiv.innerHTML = `<img src="pic12.jpg" alt="Profile picture"/><div class="content"><p>${text}</p></div>`;
+            }
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+            if (type === 'received') {
+                let lastTap = 0;
+                messageDiv.addEventListener('touchend', () => {
+                    const currentTime = new Date().getTime();
+                    if (currentTime - lastTap <= 300) {
+                        showGifPopup();
+                    } else {
+                        lastTap = currentTime;
+                    }
+                });
+            }
+        }
+
+        function showGifPopup() {
+            overlay.style.display = 'block';
+            gifPopup.style.display = 'block';
+            setTimeout(() => {
+                overlay.style.display = 'none';
+                gifPopup.style.display = 'none';
+            }, 5000);
+        }
+
+
+    </script>
+</body>
+</html>

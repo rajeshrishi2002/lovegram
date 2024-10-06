@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lovegram</title>
+    <link rel="icon" href="icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./sass/vender/bootstrap.css">
+    <link rel="stylesheet" href="./sass/vender/bootstrap.min.css">
+    <link rel="stylesheet" href="./owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.css">
+    <link rel="stylesheet" href="./sass/main.css">
+    <style>
+        /* Styles for mobile screens */
+        @media (max-width: 640px) {
+            body {
+                font-size: 0.875rem; /* Smaller font size */
+            }
+
+            .max-w-md {
+                max-width: 100%; /* Full width on mobile */
+            }
+
+            .border-b {
+                border-bottom-width: 1px; /* Reduced border width for mobile */
+            }
+
+            .active-tab {
+                border-color: rgb(0, 0, 0); /* Active tab color */
+            }
+        }
+
+        /* Styles for larger screens */
+        @media (min-width: 641px) {
+            .max-w-md {
+                max-width: 30rem; /* Set max width for larger screens */
+            }
+        }
+    </style>
+    <script>
+        function showTab(tab) {
+            document.getElementById('people-tab').classList.add('hidden');
+            document.getElementById('hashtags-tab').classList.add('hidden');
+            document.getElementById(tab).classList.remove('hidden');
+
+            if (tab === 'people-tab') {
+                document.getElementById('people-tab-button').classList.add('active-tab');
+                document.getElementById('hashtags-tab-button').classList.remove('active-tab');
+            } else {
+                document.getElementById('hashtags-tab-button').classList.add('active-tab');
+                document.getElementById('people-tab-button').classList.remove('active-tab');
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white font-sans" style="margin-bottom: 30px;">
+    <div class="max-w-md mx-auto">
+        <!-- Header -->
+        <div class="flex items-center justify-between p-4 border-b">
+            <a href="profile.html">
+            <i class="fas fa-arrow-left text-xl"></i></a>
+            <h1 class="text-lg font-semibold">Following</h1>
+            <div></div>
+        </div>
+        <!-- Tabs -->
+        <div class="flex justify-around border-b">
+            <div class="py-2 border-b-2 cursor-pointer active-tab" id="people-tab-button" onclick="showTab('people-tab')">
+                <span>PEOPLE</span>
+            </div>
+            <div class="py-2 border-b-2  " id="hashtags-tab-button" onclick="showTab('hashtags-tab')">
+                <span>HASHTAGS</span>
+            </div>
+        </div>
+        <!-- Search Bar -->
+        <div class="p-4">
+            <div class="relative">
+                <input class="w-full p-2 pl-10 border rounded-full bg-gray-100" placeholder="Search" type="text"/>
+                <i class="fas fa-search absolute top-3 right-4 text-gray-400"></i>
+            </div>
+        </div>
+        <!-- People Tab -->
+        <div id="people-tab" style="margin-top: -20px;">
+            <div class="p-4">
+                <!-- User List -->
+                <!-- Repeat the following block for each user -->
+                <div class="flex items-center justify-between py-2">
+                    <div class="flex items-center">
+                        <img alt="Profile" class="w-10 h-10 rounded-full" src="aira.jpg"/>
+                        <div class="ml-4">
+                            <div class="font-semibold">princess_aira</div>
+                            <div class="text-gray-500 text-sm">Zara</div>
+                        </div>
+                    </div>
+                    <button class="px-4 py-1 text-sm font-semibold bg-blue-500 rounded-full"  style="border-radius: 7px; background-color: rgb(224, 224, 224);color: rgb(0, 0, 0);">Following</button>
+                </div>
+                <div class="flex items-center justify-between py-2">
+                  <div class="flex items-center">
+                      <img alt="Profile" class="w-10 h-10 rounded-full" src="varshini.jpg"/>
+                      <div class="ml-4">
+                          <div class="font-semibold">vxrshx_10</div>
+                          <div class="text-gray-500 text-sm">வர்ஷினி 🧸</div>
+                      </div>
+                  </div>
+                  <button class="px-4 py-1 text-sm font-semibold bg-blue-500 rounded-full"  style="border-radius: 7px; background-color: rgb(224, 224, 224);color: rgb(0, 0, 0);">Following</button>
+              </div>
+              <div class="flex items-center justify-between py-2">
+                <div class="flex items-center">
+                    <img alt="Profile" class="w-10 h-10 rounded-full" src="sona.jpg"/>
+                    <div class="ml-4">
+                        <div class="font-semibold"> _sona.23</div>
+                        <div class="text-gray-500 text-sm">ѕσηα❤😻🎀</div>
+                    </div>
+                </div>
+                <button class="px-4 py-1 text-sm font-semibold  bg-blue-500 rounded-full" style="border-radius: 7px; background-color: rgb(224, 224, 224);color: rgb(0, 0, 0);">Following</button>
+            </div>
+            <div class="flex items-center justify-between py-2">
+              <div class="flex items-center">
+                  <img alt="Profile" class="w-10 h-10 rounded-full" src="raguvengat.jpg"/>
+                  <div class="ml-4">
+                      <div class="font-semibold">raguvenkat.26</div>
+                      <div class="text-gray-500 text-sm"></div>
+                  </div>
+              </div>
+              <button class="px-4 py-1 text-sm font-semibold bg-blue-500 rounded-full"  style="border-radius: 7px; background-color: rgb(224, 224, 224); color: #000;">Following</button>
+          </div>
+          
+                <!-- Repeat above user block for more users -->
+            </div>
+        </div>
+        <!-- Hashtags Tab -->
+        <div class="hidden" id="hashtags-tab"  style="margin-top: -20px;">
+            <div class="p-4">
+                <!-- Hashtag List -->
+                <div class="flex items-center justify-between py-2">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+                            <i class="fas fa-hashtag text-xl text-gray-500"></i>
+                        </div>
+                        <div class="ml-4">
+                            <div class="font-semibold">#family</div>
+                            <div class="text-gray-500 text-sm">1.3M posts</div>
+                        </div>
+                    </div>
+                    <button class="px-4 py-1 text-sm font-semibold  bg-blue-500 rounded-full"  style="border-radius: 7px; background-color: rgb(224, 224, 224);color: rgb(33, 32, 32);">Following</button>
+                </div>
+                <div class="flex items-center justify-between py-2">
+                  <div class="flex items-center">
+                      <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+                          <i class="fas fa-hashtag text-xl text-gray-500"></i>
+                      </div>
+                      <div class="ml-4">
+                          <div class="font-semibold">#love</div>
+                          <div class="text-gray-500 text-sm">1.3M posts</div>
+                      </div>
+                  </div>
+                  <button class="px-4 py-1 text-sm font-semibold  bg-blue-500 rounded-full"  style="border-radius: 7px; background-color: rgb(224, 224, 224);color: rgb(33, 32, 32);">Following</button>
+              </div>
+              <div class="flex items-center justify-between py-2">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-hashtag text-xl text-gray-500"></i>
+                    </div>
+                    <div class="ml-4">
+                        <div class="font-semibold">#nature</div>
+                        <div class="text-gray-500 text-sm">1.3M posts</div>
+                    </div>
+                </div>
+                <button class="px-4 py-1 text-sm font-semibold bg-blue-500 rounded-full"  style="border-radius: 7px; background-color: rgb(224, 224, 224);color: rgb(33, 32, 32);">Following</button>
+            </div>
+            <div class="flex items-center justify-between py-2">
+              <div class="flex items-center">
+                  <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+                      <i class="fas fa-hashtag text-xl text-gray-500"></i>
+                  </div>
+                  <div class="ml-4">
+                      <div class="font-semibold">#bangalore</div>
+                      <div class="text-gray-500 text-sm">1.3M posts</div>
+                  </div>
+              </div>
+              <button class="px-4 py-1 text-sm font-semibold  bg-blue-500 rounded-full"  style="border-radius: 7px; background-color: rgb(224, 224, 224);color: rgb(33, 32, 32);">Following</button>
+          </div>
+          <div class="flex items-center justify-between py-2">
+            <div class="flex items-center">
+                <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+                    <i class="fas fa-hashtag text-xl text-gray-500"></i>
+                </div>
+                <div class="ml-4">
+                    <div class="font-semibold">#appaamma</div>
+                    <div class="text-gray-500 text-sm">1.3M posts</div>
+                </div>
+            </div>
+            <button class="px-4 py-1 text-sm font-semibold  bg-blue-500 rounded-full"  style="border-radius: 7px; background-color: rgb(224, 224, 224);color: rgb(33, 32, 32);">Following</button>
+        </div>
+        <div class="flex items-center justify-between py-2">
+          <div class="flex items-center">
+              <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+                  <i class="fas fa-hashtag text-xl text-gray-500"></i>
+              </div>
+              <div class="ml-4">
+                  <div class="font-semibold">#thalapathy</div>
+                  <div class="text-gray-500 text-sm">1.3M posts</div>
+              </div>
+          </div>
+          <button class="px-4 py-1 text-sm font-semibold bg-blue-500 rounded-full"  style="border-radius: 7px; background-color: rgb(224, 224, 224);color: rgb(33, 32, 32);">Following</button>
+      </div>
+      <div class="flex items-center justify-between py-2">
+        <div class="flex items-center">
+            <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+                <i class="fas fa-hashtag text-xl text-gray-500"></i>
+            </div>
+            <div class="ml-4">
+                <div class="font-semibold">#friends</div>
+                <div class="text-gray-500 text-sm">1.3M posts</div>
+            </div>
+        </div>
+        <button class="px-4 py-1 text-sm font-semibold bg-blue-500 rounded-full"  style="border-radius: 7px; background-color: rgb(224, 224, 224);color: rgb(33, 32, 32);">Following</button>
+    </div>
+    <div class="flex items-center justify-between py-2">
+      <div class="flex items-center">
+          <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+              <i class="fas fa-hashtag text-xl text-gray-500"></i>
+          </div>
+          <div class="ml-4">
+              <div class="font-semibold">#schoollife</div>
+              <div class="text-gray-500 text-sm">1.3M posts</div>
+          </div>
+      </div>
+      <button class="px-4 py-1 text-sm font-semibold bg-blue-500 rounded-full"  style="border-radius: 7px; background-color: rgb(224, 224, 224);color: rgb(33, 32, 32);">Following</button>
+  </div>
+  <div class="flex items-center justify-between py-2">
+    <div class="flex items-center">
+        <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+            <i class="fas fa-hashtag text-xl text-gray-500"></i>
+        </div>
+        <div class="ml-4">
+            <div class="font-semibold">#songs</div>
+            <div class="text-gray-500 text-sm">1.3M posts</div>
+        </div>
+    </div>
+    <button class="px-4 py-1 text-sm font-semibold bg-blue-500 rounded-full"  style="border-radius: 7px; background-color: rgb(224, 224, 224);color: rgb(33, 32, 32);">Following</button>
+</div>
+<div class="flex items-center justify-between py-2">
+  <div class="flex items-center">
+      <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+          <i class="fas fa-hashtag text-xl text-gray-500"></i>
+      </div>
+      <div class="ml-4">
+          <div class="font-semibold">#taylorswift</div>
+          <div class="text-gray-500 text-sm">1.3M posts</div>
+      </div>
+  </div>
+  <button class="px-4 py-1 text-sm font-semibold  bg-blue-500 rounded-full"  style="border-radius: 7px; background-color: rgb(224, 224, 224);color: rgb(33, 32, 32);">Following</button>
+</div>
+<div class="flex items-center justify-between py-2">
+  <div class="flex items-center">
+      <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+          <i class="fas fa-hashtag text-xl text-gray-500"></i>
+      </div>
+      <div class="ml-4">
+          <div class="font-semibold">#bts</div>
+          <div class="text-gray-500 text-sm">1.3M posts</div>
+      </div>
+  </div>
+  <button class="px-4 py-1 text-sm font-semibold  bg-blue-500 rounded-full"  style="border-radius: 7px; background-color: rgb(224, 224, 224);color: rgb(33, 32, 32);">Following</button>
+</div>
+<div class="flex items-center justify-between py-2">
+  <div class="flex items-center">
+      <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+          <i class="fas fa-hashtag text-xl text-gray-500"></i>
+      </div>
+      <div class="ml-4">
+          <div class="font-semibold">#drama</div>
+          <div class="text-gray-500 text-sm">1.2M posts</div>
+      </div>
+  </div>
+  <button class="px-4 py-1 text-sm font-semibold  bg-blue-500 rounded-full"  style="border-radius: 7px; background-color: rgb(224, 224, 224);color: rgb(33, 32, 32);">Following</button>
+</div>
+<div class="flex items-center justify-between py-2">
+  <div class="flex items-center">
+      <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+          <i class="fas fa-hashtag text-xl text-gray-500"></i>
+      </div>
+      <div class="ml-4">
+          <div class="font-semibold">#derma</div>
+          <div class="text-gray-500 text-sm">1.2M posts</div>
+      </div>
+  </div>
+  <button class="px-4 py-1 text-sm font-semibold  bg-blue-500 rounded-full"  style="border-radius: 7px; background-color: rgb(224, 224, 224);color: rgb(33, 32, 32);">Following</button>
+</div>
+
+                <!-- Repeat above hashtag block for more hashtags -->
+            </div>
+        </div>
+    </div>
+    <div class="nav_menu">
+        <div class="fix_top">
+            <!-- nav for big->medium screen -->
+            <div class="nav">
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a class="active" href="home.html">
+                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2053557/home-icon.png">
+                                <span class="d-none d-lg-block ">Home</span>
+                            </a>
+                        </li>
+                        <li id="search_icon">
+                            <a href="#">
+                                <img src="./images/search.png">
+                                <span class="d-none d-lg-block search">Search </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#create_modal">
+                                <img src="./images/tab.png">
+                                <span class="d-none d-lg-block ">Create</span>
+                            </a>
+  
+                        </li>
+                        <li>
+                            <a href="./explore.html">
+                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2053557/search-icon.png">
+                                <span class="d-none d-lg-block ">Explore</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./reels.html">
+                                <img src="./images/video.png">
+                                <span class="d-none d-lg-block ">Reels</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./messages.html">
+                                <img src="./images/send.png">
+                                <span class="d-none d-lg-block ">Messages</span>
+                            </a>
+                        </li>
+                        <li class="notification_icon">
+                            <a href="#">
+                                <img src="./images/love.png">
+                                <span class="d-none d-lg-block ">Notifications</span>
+                            </a>
+                        </li>
+                   
+                        <li>
+                            <a href="./profile.html">
+                                <img class="circle story" src="./images/logo_menu.jpg">
+                                <span class="d-none d-lg-block ">Profile</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+  
+            <!-- nav for ex-small screen  -->
+            
+        </div>
+        <!-- menu in the botton for smal screen  -->
+        <div class="nav_bottom">
+            <a href="./home.html"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2053557/home-icon.png"></a>
+            <a href="./explore.html"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2053557/search-icon.png"></a>
+            <a href="./reels.html"><img src="./images/video.png"></a>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#create_modal"><img src="./images/tab.png"></a>
+            <a href="profile.html"><img class="circle story" src="pic12.jpg"></a>
+        </div>
+    </div>
+</body>
+</html>
