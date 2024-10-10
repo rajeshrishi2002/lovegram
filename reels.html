@@ -168,234 +168,428 @@
                 <a href="profile.html"><img class="circle story" src="./images/profile_img.jpg"></a>
             </div>
         </div>
-        <!-- search  -->
-        <div id="search" class="search_section">
-            <h2>Search</h2>
-            <form method="post">
-                <input type="text" placeholder="Search">
-            </form>
-            <div class="find">
-                <div class="desc">
-                    <h4>Recent</h4>
-                    <p><a href="#">Clear all</a></p>
-                </div>
-                <div class="account">
-                    <div class="cart">
-                        <div>
-                            <div class="img">
-                                <img src="./images/profile_img.jpg" alt="">
-                            </div>
-                            <div class="info">
-                                <p class="name">Zineb_essoussi</p>
-                                <p class="second_name">Zim Ess</p>
-                            </div>
-                        </div>
-                        <div class="clear">
-                            <a href="#">X</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- notification -->
+
+
         
         <!--***** nav menu end ****** -->
         <div class="reels" >
            
         <!-- Modal for add messages-->
-        <div class="modal fade" id="message_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Comments</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="comments">
-                            <div class="comment">
-                                <div class="d-flex">
-                                    <div class="img">
-                                        <img src="./images/profile_img.jpg" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <div class="person">
-                                            <h4>namePerson</h4>
-                                            <span>3j</span>
-                                        </div>
-                                        <p>Wow amzing shot</p>
-                                        <div class="replay">
-                                            <button class="replay">replay</button>
-                                            <button class="translation">see translation</button>
-                                        </div>
-                                        <div class="answers">
-                                            <button class="see_comment">
-                                                <span class="hide_com">Hide all responses</span>
-                                                <span class="show_c"> <span class="line"></span> See the <span> 1
-                                                    </span> answers</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="like">
-                                    <img class="not_loved" src="./images/love.png" alt="">
-                                    <img class="loved" src="./images/heart.png" alt="">
-                                    <p> 55</p>
-                                </div>
-                            </div>
-                            <div class="responses">
-                                <div class="response comment">
-                                    <div class="d-flex">
-                                        <div class="img">
-                                            <img src="./images/profile_img.jpg" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <div class="person">
-                                                <h4>namePerson</h4>
-                                                <span>3j</span>
-                                            </div>
-                                            <p>Wow amzing shot</p>
-                                            <div class="replay">
-                                                <button>replay</button>
-                                                <button>see translation</button>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="like">
-                                        <img class="not_loved" src="./images/love.png" alt="">
-                                        <img class="loved" src="./images/heart.png" alt="">
-                                        <p> 55</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <form method="post">
-                            <div class="input">
-                                <img src="./images/profile_img.jpg" alt="">
-                                <input type="text" id="emoji_comment" placeholder="Add a comment..." />
-                            </div>
-                            <!-- <div class="emogi">
-                                <img src="./images/emogi.png" alt="">
-                            </div> -->
-                        </form>
-                    </div>
-                </div>
+<div class="modal fade" id="message_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Comments</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-        </div>
-
-        <!-- Modal for sending posts-->
-        <div class="modal fade" id="send_message_modal" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Share</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="send">
-                            <div class="search_person">
-                                <p>To:</p>
-                                <input type="text" placeholder="Search">
+            <div class="modal-body">
+                <div class="comments">
+                    <!-- Existing Comment -->
+                    <div class="comment">
+                        <div class="d-flex" >
+                            <div class="img" >
+                                <img src="raguvengat.jpg" alt="">
                             </div>
-                            <p>Suggested</p>
-                            <div class="poeple">
+                            <div class="content" >
                                 <div class="person">
-                                    <div class="d-flex">
-                                        <div class="img">
-                                            <img src="./images/profile_img.jpg" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <div class="person">
-                                                <h4>namePerson</h4>
-                                                <span>zim ess</span>
+                                    <h4>raguvenkat.26</h4>
+                                    <span>now</span>
+                                </div>
+                                <p style="color: black;">Happy🥹❤️</p>
+                                <div class="replay">
+                                    <button class="replay">reply</button>
+                                    <button class="translation">see translation</button>
+                                </div>
+                                <div class="answers">
+                                    <button class="see_comment" onclick="toggleResponses(this)">
+                                        <span class="hide_com" style="display: none;">Hide all responses</span>
+                                        <span class="show_c"><span class="line"></span> See the <span>1</span> answers</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="like" style="display: flex; align-items: center;">
+                            <img class="not_loved" src="./images/love.png" alt="">
+                            <img class="loved" src="./images/heart.png" alt="">
+                            <div style="text-align: center; margin-left: 5px;"> <!-- Adjusted structure for alignment -->
+                                <p style="margin-right: 6px; color: black;" >5</p> <!-- Like count for the comment -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="responses" style="display: none;">
+                        <div class="response comment">
+                            <div class="d-flex">
+                                <div class="img">
+                                    <img src="pic12.jpg" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="person">
+                                        <h4>nerida_princess</h4>
+                                        <span>now</span>
+                                    </div>
+                                    <p style="color: black;" >❤️🫂</p>
+                                    <div class="replay">
+                                        <button>reply</button>
+                                        <button>see translation</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="like" style="display: flex; align-items: center;">
+                                <img class="not_loved" src="./images/love.png" alt="">
+                                <img class="loved" src="./images/heart.png" alt="">
+                                <div style="text-align: center; margin-left: 5px;"> <!-- Adjusted structure for alignment -->
+                                    <p style="margin-right: 6px; color: black;" >5</p> <!-- Like count for the response -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        <!--Comment1 -->
+                                        <div class="comment">
+                                            <div class="d-flex">
+                                                <div class="img">
+                                                    <img src="./images/profile_img.jpg" alt="">
+                                                </div>
+                                                <div class="content">
+                                                    <div class="person">
+                                                        <h4>prince_rajesh</h4>
+                                                        <span>now</span>
+                                                    </div>
+                                                    <p style="color: black;">Hey pondati🥰😘💗</p>
+                                                    <div class="replay">
+                                                        <button class="replay">reply</button>
+                                                        <button class="translation">see translation</button>
+                                                    </div>
+                                                    <div class="answers">
+                                                        <button class="see_comment" onclick="toggleResponses(this)">
+                                                            <span class="hide_com" style="display: none;">Hide all responses</span>
+                                                            <span class="show_c"><span class="line"></span> See the <span>1</span> answers</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="like" style="display: flex; align-items: center;">
+                                                <img class="not_loved" src="./images/love.png" alt="">
+                                                <img class="loved" src="./images/heart.png" alt="">
+                                                <div style="text-align: center; margin-left: 5px;"> <!-- Adjusted structure for alignment -->
+                                                    <p style="margin-right: 6px; color: black;" >5</p> <!-- Like count for the comment -->
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <di class="circle">
-                                        <span></span>
-                                </div>
-                            </div>
-                            <div class="person">
-                                <div class="d-flex">
-                                    <div class="img">
-                                        <img src="./images/profile_img.jpg" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <div class="person">
-                                            <h4>namePerson</h4>
-                                            <span>zim ess</span>
+                                        <div class="responses" style="display: none;">
+                                            <div class="response comment">
+                                                <div class="d-flex">
+                                                    <div class="img">
+                                                        <img src="./images/profile_img.jpg" alt="">
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="person">
+                                                            <h4>nerida_princess</h4>
+                                                            <span>now</span>
+                                                        </div>
+                                                        <p style="color: black;">😘💗🫂</p>
+                                                        <div class="replay">
+                                                            <button>reply</button>
+                                                            <button>see translation</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="like" style="display: flex; align-items: center;">
+                                                    <img class="not_loved" src="./images/love.png" alt="">
+                                                    <img class="loved" src="./images/heart.png" alt="">
+                                                    <div style="text-align: center; margin-left: 5px;"> <!-- Adjusted structure for alignment -->
+                                                        <p style="margin-right: 6px; color: black;" >5</p> <!-- Like count for the comment -->
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
+
+                    <!-- Comment 2 -->
+                    <div class="comment">
+                        <div class="d-flex">
+                            <div class="img">
+                                <img src="varshini.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="person">
+                                    <h4>vxrshx_10</h4>
+                                    <span>5m</span>
                                 </div>
-                                <div class="circle">
-                                    <span></span>
+                                <p style="color: black;">Akka happy annachi😅🥰❤️</p>
+                                <div class="replay">
+                                    <button class="replay">reply</button>
+                                    <button class="translation">see translation</button>
+                                </div>
+                                <div class="answers">
+                                    <button class="see_comment" onclick="toggleResponses(this)">
+                                        <span class="hide_com" style="display: none;">Hide all responses</span>
+                                        <span class="show_c"><span class="line"></span> See the <span>2</span> answers</span>
+                                    </button>
                                 </div>
                             </div>
-
+                        </div>
+                        <div class="like" style="display: flex; align-items: center;">
+                            <img class="not_loved" src="./images/love.png" alt="">
+                            <img class="loved" src="./images/heart.png" alt="">
+                            <div style="text-align: center; margin-left: 5px;"> <!-- Adjusted structure for alignment -->
+                                <p style="margin-right: 6px; color: black;" >5</p> <!-- Like count for the comment -->
+                            </div>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-primary">Send</button>
+                    <div class="responses" style="display: none;">
+                        <div class="response comment">
+                            <div class="d-flex">
+                                <div class="img">
+                                    <img src="pic12.jpg" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="person">
+                                        <h4>nerida_princess</h4>
+                                        <span>5m</span>
+                                    </div>
+                                    <p style="color: black;">aii😅🥰🤗</p>
+                                    <div class="replay">
+                                        <button>reply</button>
+                                        <button>see translation</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="like" style="display: flex; align-items: center;">
+                                <img class="not_loved" src="./images/love.png" alt="">
+                                <img class="loved" src="./images/heart.png" alt="">
+                                <div style="text-align: center; margin-left: 5px;"> <!-- Adjusted structure for alignment -->
+                                    <p style="margin-right: 6px; color: black;" >5</p> <!-- Like count for the comment -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="response comment">
+                            <div class="d-flex">
+                                <div class="img">
+                                    <img src="pic12.jpg" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="person">
+                                        <h4>prince_rajesh</h4>
+                                        <span>5m</span>
+                                    </div>
+                                    <p style="color: black;">naa un akka va romba happy ah paathupen seriya🥰</p>
+                                    <div class="replay">
+                                        <button>reply</button>
+                                        <button>see translation</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="like" style="display: flex; align-items: center;">
+                                <img class="not_loved" src="./images/love.png" alt="">
+                                <img class="loved" src="./images/heart.png" alt="">
+                                <div style="text-align: center; margin-left: 5px;"> <!-- Adjusted structure for alignment -->
+                                    <p style="margin-right: 6px; color: black;" >5</p> <!-- Like count for the comment -->
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                                        <!-- Comment 3 -->
+                                        <div class="comment">
+                                            <div class="d-flex">
+                                                <div class="img">
+                                                    <img src="sona.jpg" alt="">
+                                                </div>
+                                                <div class="content">
+                                                    <div class="person">
+                                                        <h4>_sona.23</h4>
+                                                        <span>13m</span>
+                                                    </div>
+                                                    <p style="color: black;">Happy for you darling🥹😘❤️</p>
+                                                    <div class="replay">
+                                                        <button class="replay">reply</button>
+                                                        <button class="translation">see translation</button>
+                                                    </div>
+                                                    <div class="answers">
+                                                        <button class="see_comment" onclick="toggleResponses(this)">
+                                                            <span class="hide_com" style="display: none;">Hide all responses</span>
+                                                            <span class="show_c"><span class="line"></span> See the <span>2</span> answers</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="like" style="display: flex; align-items: center;">
+                                                <img class="not_loved" src="./images/love.png" alt="">
+                                                <img class="loved" src="./images/heart.png" alt="">
+                                                <div style="text-align: center; margin-left: 5px;"> <!-- Adjusted structure for alignment -->
+                                                    <p style="margin-right: 6px; color: black;" >5</p> <!-- Like count for the comment -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="responses" style="display: none;">
+                                            <div class="response comment">
+                                                <div class="d-flex">
+                                                    <div class="img">
+                                                        <img src="pic12.jpg" alt="">
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="person">
+                                                            <h4>nerida_princess</h4>
+                                                            <span>13m</span>
+                                                        </div>
+                                                        <p style="color: black;">🥹😘🫂</p>
+                                                        <div class="replay">
+                                                            <button>reply</button>
+                                                            <button>see translation</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="like" style="display: flex; align-items: center;">
+                                                    <img class="not_loved" src="./images/love.png" alt="">
+                                                    <img class="loved" src="./images/heart.png" alt="">
+                                                    <div style="text-align: center; margin-left: 5px;"> <!-- Adjusted structure for alignment -->
+                                                        <p style="margin-right: 6px; color: black;" >5</p> <!-- Like count for the comment -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="response comment">
+                                                <div class="d-flex">
+                                                    <div class="img">
+                                                        <img src="varshini.jpg" alt="">
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="person">
+                                                            <h4>vxrshx_10</h4>
+                                                            <span>28m</span>
+                                                        </div>
+                                                        <p style="color: black;">Akka ini eppome happy thaan🥰</p>
+                                                        <div class="replay">
+                                                            <button>reply</button>
+                                                            <button>see translation</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="like" style="display: flex; align-items: center;">
+                                                    <img class="not_loved" src="./images/love.png" alt="">
+                                                    <img class="loved" src="./images/heart.png" alt="">
+                                                    <div style="text-align: center; margin-left: 5px;"> <!-- Adjusted structure for alignment -->
+                                                        <p style="margin-right: 6px; color: black;" >5</p> <!-- Like count for the comment -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                            <!-- Comment 4 -->
+                    <div class="comment">
+                        <div class="d-flex">
+                            <div class="img">
+                                <img src="aira.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="person">
+                                    <h4>princess_aira</h4>
+                                    <span>28m</span>
+                                </div>
+                                <p style="color: black;">amma appa💗😘😘😘😘🫂</p>
+                                <div class="replay">
+                                    <button class="replay">reply</button>
+                                    <button class="translation">see translation</button>
+                                </div>
+                                <div class="answers">
+                                    <button class="see_comment" onclick="toggleResponses(this)">
+                                        <span class="hide_com" style="display: none;">Hide all responses</span>
+                                        <span class="show_c"><span class="line"></span> See the <span>2</span> answers</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="like" style="display: flex; align-items: center;">
+                            <img class="not_loved" src="./images/love.png" alt="">
+                            <img class="loved" src="./images/heart.png" alt="">
+                            <div style="text-align: center; margin-left: 5px;"> <!-- Adjusted structure for alignment -->
+                                <p style="margin-right: 6px; color: black;" >5</p> <!-- Like count for the comment -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="responses" style="display: none;">
+                        <div class="response comment">
+                            <div class="d-flex">
+                                <div class="img">
+                                    <img src="pic12.jpg" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="person">
+                                        <h4>nerida_princess</h4>
+                                        <span>28m</span>
+                                    </div>
+                                    <p style="color: black;">chellam😘😘</p>
+                                    <div class="replay">
+                                        <button>reply</button>
+                                        <button>see translation</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="like" style="display: flex; align-items: center;">
+                                <img class="not_loved" src="./images/love.png" alt="">
+                                <img class="loved" src="./images/heart.png" alt="">
+                                <div style="text-align: center; margin-left: 5px;"> <!-- Adjusted structure for alignment -->
+                                    <p style="margin-right: 6px; color: black;" >5</p> <!-- Like count for the comment -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="response comment">
+                            <div class="d-flex">
+                                <div class="img">
+                                    <img src="pic12.jpg" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="person">
+                                        <h4>prince_rajesh</h4>
+                                        <span>28m</span>
+                                    </div>
+                                    <p style="color: black;">chellakutty😘🫂💗</p>
+                                    <div class="replay">
+                                        <button>reply</button>
+                                        <button>see translation</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="like" style="display: flex; align-items: center;">
+                                <img class="not_loved" src="./images/love.png" alt="">
+                                <img class="loved" src="./images/heart.png" alt="">
+                                <div style="text-align: center; margin-left: 5px;"> <!-- Adjusted structure for alignment -->
+                                    <p style="margin-right: 6px; color: black;" >5</p> <!-- Like count for the comment -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <form method="post">
+                    <div class="input">
+                        <input type="text" id="emoji_comment" placeholder="Add a comment..." />
+                    </div>
+                </form>
             </div>
         </div>
-
-
-        <!--Create model-->
-        <div class="modal fade" id="create_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title w-100 fs-5 d-flex align-items-end justify-content-between"
-                            id="exampleModalLabel">
-                            <span class="title_create">Create new post</span>
-                            <button class="next_btn_post btn_link"></button>
-                        </h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <img class="up_load" src="./images/upload.png" alt="upload">
-                        <p>Drag photos and videos here</p>
-                        <button class="btn btn-primary btn_upload">
-                            select from your computer
-                            <form id="upload-form">
-                                <input class="input_select" type="file" id="image-upload" name="image-upload">
-                            </form>
-                        </button>
-                        <div id="image-container" class="hide_img">
-                        </div>
-                        <div id="image_description" class="hide_img">
-                            <div class="img_p"></div>
-                            <div class="description">
-                                <div class="cart">
-                                    <div>
-                                        <div class="img">
-                                            <img src="./images/profile_img.jpg">
-                                        </div>
-                                        <div class="info">
-                                            <p class="name">Zineb_essoussi</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <form>
-                                    <textarea type="text" id="emoji_create" placeholder="write your email"></textarea>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="post_published hide_img">
-                            <img src="./images/uploaded_post.gif" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
+</div>
+
+<script>
+    function toggleResponses(button) {
+        const responsesDiv = button.closest('.comment').nextElementSibling;
+        const hideCom = button.querySelector('.hide_com');
+        const showCom = button.querySelector('.show_c');
+
+        if (responsesDiv.style.display === "none") {
+            responsesDiv.style.display = "block";
+            hideCom.style.display = "inline";
+            showCom.style.display = "none";
+        } else {
+            responsesDiv.style.display = "none";
+            hideCom.style.display = "none";
+            showCom.style.display = "inline";
+        }
+    }
+</script>
+
+
+    
 
 
 
