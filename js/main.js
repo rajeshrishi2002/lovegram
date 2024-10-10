@@ -321,7 +321,7 @@ for(let i=0;i<reels_data.length;i++){
               <div class="desc">
                   <p>${reels_data[i][3]} <span class="show_text"></span>
                   </p>
-                  <div class="more">
+                  <div class="more" style="margin-bottom:9px;">
                       <div class="music">
                           <img src="./images/music.png" >
                           <span>${reels_data[i][4]}</span>
@@ -360,7 +360,7 @@ for(let i=0;i<reels_data.length;i++){
       <div class="more" style="margin-bottom:0%;">
           <img src="./images/morew.png" >
       </div>
-      <div class="profile" style="margin-bottom:100%;">
+      <div class="profile" style="margin-bottom:60px;">
           <img src="${reels_data[i][1]}" >
       </div>
   </div>`;
