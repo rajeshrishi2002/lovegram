@@ -30,17 +30,17 @@ if(posts)
           <div class="icon_left d-flex">
               <div class="like">
                   <img class="not_loved" src="./images/love.png" >
-                  <img class="loved" src="./images/heart.png" >
+                  <img class="loved" src="./images/heart.png">
               </div>
               <div class="chat">
                   <button type="button" class="btn p-0" data-bs-toggle="modal"
-                      data-bs-target="#message_modal">
-                      <img src="./images/bubble-chat.png" >
+                      data-bs-target="#message_modal" style="border:none;">
+                      <img src="./images/bubble-chat.png" style="width:32px; top:20px;" >
                   </button>
               </div>
               <div class="send">
                   <button type="button" class="btn p-0" data-bs-toggle="modal"
-                      data-bs-target="#send_message_modal">
+                      data-bs-target="#send_message_modal" style="border:none;">
                       <img src="./images/send.png" >
                   </button>
               </div>
@@ -179,41 +179,45 @@ for (var i = 0; i < explore_date.length;i++) {
 
 /*****************Reels********************/
 const reels_data = [
-  ['./video/video1.mp4',
+  ['mine.mp4',
   './images/profile_img.jpg',
-  'zineb',
-  'Lorem ipsum dolor sit amet, consectetur adipisicing elit.Officiis...',
-  'nameOfMusic',
-  'casablanca',
-  '55.9K',
-  '555',
+  'nerida_princess',
+  '𝐖𝐡𝐞𝐧 𝐲𝐨𝐮𝐫 𝐡𝐞𝐚𝐫𝐭 𝐚𝐧𝐝 𝐨𝐮𝐭𝐟𝐢𝐭 𝐞𝐦𝐛𝐨𝐝𝐲 𝐩𝐮𝐫𝐞 𝐥𝐨𝐯𝐞 𝐟𝐨𝐫 𝐭𝐫𝐚𝐝𝐢𝐭𝐢𝐨𝐧𝐬✨𝐒𝐢𝐦𝐩𝐥𝐲 𝐁𝐞𝐢𝐧𝐠 𝐌𝐲𝐬𝐞𝐥𝐟❤️𝐁𝐞𝐢𝐧𝐠 𝐢𝐧 𝐥𝐨𝐯𝐞 𝐰𝐢𝐭𝐡 𝐲𝐨𝐮𝐫𝐬𝐞𝐥𝐟 𝐢𝐬 𝐭𝐡𝐞 𝐦𝐨𝐬𝐭 𝐛𝐞𝐚𝐮𝐭𝐢𝐟𝐮𝐥 𝐭𝐡𝐢𝐧𝐠❣️🌹 ',
+  'Favorite Music',
+  'My Heart',
+  '5',
+  '13',
+   '8'
   ],
-  ['./video/video2.mp4',
-  'https://i.ibb.co/3S1hjKR/account1.jpg',
-  'ikram',
-  'Lorem ipsum dolor sit amet, consectetur adipisicing elit.Officiis...',
-  'nameOfMusic',
-  'oujda',
-  '35.9K',
-  '75',
+  ['mine2.mp4',
+  './images/profile_img.jpg',
+  'nerida_princess',
+  '𝐄𝐯𝐞𝐫𝐲 𝐥𝐢𝐭𝐭𝐥𝐞 𝐭𝐡𝐢𝐧𝐠 𝐫𝐞𝐦𝐢𝐧𝐝𝐬 𝐦𝐞 𝐨𝐟 𝐲𝐨𝐮,𝐈𝐧 𝐞𝐯𝐞𝐫𝐲 𝐦𝐨𝐦𝐞𝐧𝐭, 𝐈 𝐟𝐞𝐞𝐥 𝐲𝐨𝐮𝐫 𝐥𝐨𝐯𝐞, 𝐬𝐨 𝐭𝐫𝐮𝐞💗🫂',
+  'Favorite Music',
+  'My Heart',
+  '5',
+  '28',
+  '8'
   ],
-  ['./video/video3.mp4',
-  'https://i.ibb.co/8x4Hqdw/account2.jpg',
-  'oumnia',
-  'Lorem ipsum dolor sit amet, consectetur adipisicing elit.Officiis...',
-  'nameOfMusic',
-  'rabat',
-  '10.5K',
-  '155',
+  ['mine3.mp4',
+ './images/profile_img.jpg',
+  'nerida_princess',
+  '𝐘𝐨𝐮 𝐚𝐫𝐞 𝐦𝐲 𝐬𝐮𝐧𝐬𝐡𝐢𝐧𝐞,𝐓𝐡𝐞 𝐨𝐧𝐞 𝐈 𝐜𝐡𝐞𝐫𝐢𝐬𝐡 𝐦𝐨𝐬𝐭,𝐅𝐨𝐫𝐞𝐯𝐞𝐫, 𝐲𝐨𝐮 𝐚𝐫𝐞 𝐦𝐢𝐧𝐞💗😘🥰🫂,',
+  'Favorite Music',
+  'My Heart',
+  '5',
+  '8',
+  '13'
   ],
-  ['./video/video4.mp4',
-  'https://i.ibb.co/CWbynB2/account3-1.jpg',
-  'Safae',
-  'Lorem ipsum dolor sit amet, consectetur adipisicing elit.Officiis...',
-  'nameOfMusic',
-  'Nador',
-  '705.9K',
-  '750',
+  ['mine4.mp4',
+ './images/profile_img.jpg',
+  'nerida_princess',
+  '𝐈 𝐰𝐢𝐥𝐥 𝐡𝐨𝐥𝐝 𝐭𝐡𝐨𝐬𝐞 𝐦𝐞𝐦𝐨𝐫𝐢𝐞𝐬 𝐜𝐥𝐨𝐬𝐞 𝐭𝐨 𝐦𝐲 𝐡𝐞𝐚𝐫𝐭,𝐄𝐯𝐞𝐫𝐲 𝐥𝐚𝐮𝐠𝐡 𝐚𝐧𝐝 𝐬𝐦𝐢𝐥𝐞, 𝐰𝐞’𝐥𝐥 𝐧𝐞𝐯𝐞𝐫 𝐛𝐞 𝐚𝐩𝐚𝐫𝐭💗🫂',
+  'Favorite Music',
+  'My Heart',
+  '5',
+  '13',
+  '5'
   ],
 
 
@@ -235,7 +239,7 @@ for(let i=0;i<reels_data.length;i++){
             <img class="volume-up" src="./images/volume-up.png" >
             <img class="volume-mute" src="./images/volume-mute.png" >
         </div>
-        <div class="play">
+        <div class="play" style="margin-top:90px;">
             <img src="./images/play-button-arrowhead.png" >
         </div>
         <div class="info">
@@ -248,7 +252,7 @@ for(let i=0;i<reels_data.length;i++){
                 <button class="follow_text">Follow</button>
             </div>
             <div class="desc">
-                <p>${reels_data[i][3]} <span class="show_text">more</span>
+                <p>${reels_data[i][3]} <span class="show_text"></span>
                 </p>
                 <div class="more">
                     <div class="music">
@@ -266,38 +270,39 @@ for(let i=0;i<reels_data.length;i++){
 </div>
 <div class="likes">
     <div class="like">
-        <img class="not_loved" src="./images/love.png" >
+        <img class="not_loved" src="./images/likew.png" >
         <img class="loved" src="./images/heart.png" >
         <p> ${reels_data[i][6]}</p>
     </div>
     <div class="messsage">
         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#message_modal">
-            <img src="./images/bubble-chat.png" >
+            <img src="./images/commentw.png" style="width:30px;">
             <p class="m-0">${reels_data[i][7]}</p>
         </button>
     </div>
     <div class="send">
         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#send_message_modal">
-            <img src="./images/send.png" >
+            <img src="./images/sharew.png" >
+            <p class="m-0">${reels_data[i][8]}</p>
         </button>
     </div>
     <div class="save not_saved">
-        <img class="hide saved" src="./images/save_black.png" >
-        <img class="not_saved" src="./images/save-instagram.png" >
+        <img class="hide saved" src="images/savefw.png" >
+        <img class="not_saved" src="./images/savew.png" >
     </div>
     <div class="more">
-        <img src="./images/show_more.png" >
+        <img src="./images/morew.png" >
     </div>
     <div class="profile">
         <img src="${reels_data[i][1]}" >
     </div>
 </div>`;
     }else{
-        reel_div.innerHTML = `<div class="video">
+        reel_div.innerHTML = `<div class="video" style="height: 900px;">
       <video src="${reels_data[i][0]}" loop>
       </video>
-      <div class="content">
-          <div class="sound">
+      <div class="content" style="height: 93%;">
+          <div class="sound" style="height:20%;">
               <img class="volume-up" src="./images/volume-up.png" >
               <img class="volume-mute" src="./images/volume-mute.png" >
           </div>
@@ -314,7 +319,7 @@ for(let i=0;i<reels_data.length;i++){
                   <button class="follow_text">Follow</button>
               </div>
               <div class="desc">
-                  <p>${reels_data[i][3]} <span class="show_text">more</span>
+                  <p>${reels_data[i][3]} <span class="show_text"></span>
                   </p>
                   <div class="more">
                       <div class="music">
@@ -331,30 +336,31 @@ for(let i=0;i<reels_data.length;i++){
       </div>
   </div>
   <div class="likes">
-      <div class="like">
-          <img class="not_loved" src="./images/love.png" >
+      <div class="like"style="margin-bottom:0%;" >
+          <img class="not_loved" src="./images/likew.png"  >
           <img class="loved" src="./images/heart.png" >
           <p> ${reels_data[i][6]}</p>
       </div>
-      <div class="messsage">
+      <div class="messsage" style="margin-bottom:0%;">
           <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#message_modal">
-              <img src="./images/bubble-chat.png" >
+              <img src="./images/commentw.png" style="width:30px;">
               <p class="m-0">${reels_data[i][7]}</p>
           </button>
       </div>
-      <div class="send">
+      <div class="send" style="margin-bottom:-1%;">
           <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#send_message_modal">
-              <img src="./images/send.png" >
+              <img src="./images/sharew.png" >
+                <p class="m-0">${reels_data[i][8]}</p>
           </button>
       </div>
-      <div class="save not_saved">
-          <img class="hide saved" src="./images/save_black.png" >
-          <img class="not_saved" src="./images/save-instagram.png" >
+      <div class="save not_saved" style="margin-bottom:0%;">
+          <img class="hide saved" src="./images/savefw.png" >
+          <img class="not_saved" src="./images/savew.png" >
       </div>
-      <div class="more">
-          <img src="./images/show_more.png" >
+      <div class="more" style="margin-bottom:0%;">
+          <img src="./images/morew.png" >
       </div>
-      <div class="profile">
+      <div class="profile" style="margin-bottom:100%;">
           <img src="${reels_data[i][1]}" >
       </div>
   </div>`;

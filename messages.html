@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lovegram</title>
-    
+    <link rel="icon" href="icon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
     <style>
+
+        
         .scrolling-text {
             display: inline-block;
             white-space: nowrap;
@@ -31,6 +33,7 @@
             .max-w-md {
                 width: 100%; /* Full width on mobile */
                 padding: 1rem; /* Adjust padding for mobile */
+                
             }
             h1 {
                 font-size: 1.5rem; /* Adjust heading size */
@@ -340,8 +343,8 @@ img {
      </script>
 </head>
 <body class="bg-white">
-    <div class="max-w-md mx-auto p-4">
-      <div class="flex items-center justify-between p-4 border-b">
+    <div class="max-w-md mx-auto p-2">
+      <div class="flex items-center justify-between p-7 border-b">
         <a href="notification.html">
         <i class="fas fa-arrow-left text-xl">
         </i></a>
@@ -349,9 +352,7 @@ img {
          nerida_princess
         </span>
         <div class="flex space-x-4">
-         <i class="fas fa-video text-xl">
-         </i>
-         <i class="fas fa-pen text-xl">
+         <i class="fas fa-pen text-xl"class="bg-gray-200 text-black py-2 px-7 rounded" onclick="togglePopup('general1Popup')">
          </i>
         </div>
        </div>
@@ -360,7 +361,7 @@ img {
             <!-- Story Items -->
             <div class="flex flex-col items-center" onclick="playSong('song1.mp3')">
                 <div class="relative">
-                    <div class="absolute top-0 left-0 bg-white rounded-lg p-1 text-xs shadow-md w-16 overflow-hidden" style="left: -4px; top: -10px;">
+                    <div class="absolute top-0 left-0 bg-white rounded-lg p-1 text-xs shadow-md w-16 overflow-hidden" style="left: -6px; top: -10px; width: 75px;">
                         <p class="scrolling-text">🎵 Unakaaga....💗🫂</p>
                         <p class="text-gray-500 scrolling-text" style="font-size: 9px;">A. R.Rahman</p>
                     </div>
@@ -372,7 +373,7 @@ img {
             </div>
             <div class="flex flex-col items-center" onclick="playSong('song2.mp3')">
               <div class="relative">
-                  <div class="absolute top-0 left-0 bg-white rounded-lg p-1 text-xs shadow-md w-16 overflow-hidden" style="left: -1px; top: -10px;">
+                  <div class="absolute top-0 left-0 bg-white rounded-lg p-1 text-xs shadow-md w-16 overflow-hidden" style="left: -6px; top: -10px; width: 75px;">
                       <p class="scrolling-text">🎵 Usurey nee..❤️</p>
                       <p class="text-gray-500 scrolling-text"style="font-size: 9px;">A. R.Rahman</p>
                   </div>
@@ -384,7 +385,7 @@ img {
           </div>
           <div class="flex flex-col items-center" onclick="playSong('song3.mp3')">
             <div class="relative">
-                <div class="absolute top-0 left-0 bg-white rounded-lg p-1 text-xs shadow-md w-16 overflow-hidden" style="left: -4px; top: -10px;">
+                <div class="absolute top-0 left-0 bg-white rounded-lg p-1 text-xs shadow-md w-16 overflow-hidden" style="left: -6px; top: -10px; width: 75px;">
                     <p class="scrolling-text">🎵 En Devathaiye..🧚🏻💗</p>
                     <p class="text-gray-500 scrolling-text"style="font-size: 9px;">A. R.Rahman</p>
                 </div>
@@ -396,7 +397,7 @@ img {
         </div>
         <div class="flex flex-col items-center" onclick="playSong('song2.mp3')">
           <div class="relative">
-              <div class="absolute top-0 left-0 bg-white rounded-lg p-1 text-xs shadow-md w-16 overflow-hidden" style="left: -1px; top: -10px;">
+              <div class="absolute top-0 left-0 bg-white rounded-lg p-1 text-xs shadow-md w-16 overflow-hidden" style="left: -6px; top: -10px;width: 75px;">
                   <p class="scrolling-text">🎵 Usurey nee..❤️</p>
                   <p class="text-gray-500 scrolling-text"style="font-size: 9px;">A. R.Rahman</p>
               </div>
@@ -413,17 +414,17 @@ img {
           <div class="max-w-md mx-auto p-4">
            <!-- Tabs -->
            <div class="flex justify-around mb-4">
-            <button class=" flex items-center space-x-2 bg-gray-200 text-black font-semibold py-2 px-4 rounded">
+            <button class=" flex items-center space-x-4 bg-gray-200 text-black font-semibold py-2 px-3 rounded">
              <span class="w-2.5 h-2.5 bg-blue-500 rounded-full">
              </span>
              <span>
               Primary 1
              </span>
             </button>
-            <button class="bg-gray-200 text-black py-2 px-4 rounded" onclick="togglePopup('generalPopup')">
+            <button class="bg-gray-200 text-black py-2 px-7 rounded" onclick="togglePopup('generalPopup')">
              General
             </button>
-            <button class="bg-gray-200 text-blue py-2 px-4 rounded" onclick="togglePopup('requestsPopup')" style="color: rgb(0, 106, 255);">
+            <button class="bg-gray-200 text-blue py-2 px-4 rounded" onclick="togglePopup('requestsPopup')" style="color: rgb(0, 98, 255);">
             Requests(3)
             </button>
            </div>
@@ -525,8 +526,8 @@ img {
  <div class="flex items-center space-x-4">
   <img alt="Profile picture of an animated character with a scarf" class="w-12 h-12 rounded-full" height="50" src="varshini.jpg" width="50"/>
   <div class="flex-1">
-   <p class="font-semibold">
-    வர்ஷினி 🧸
+   <p class="">
+    வர்ஷினி🧸
     </span>
    </p>
    <p class="text-gray-500">
@@ -537,7 +538,19 @@ img {
   </i>
  </div>
 </div>
-
+<!-- General1 Popup -->
+<div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden" id="general1Popup">
+  <div class="bg-white p-7 rounded shadow-lg relative">
+   <button class="absolute top-2 right-2 text-gray-500" onclick="togglePopup('general1Popup')">
+    <i class="fas fa-times">
+    </i>
+   </button>
+   <h2 class="text-lg font-semibold mb-4">
+    I’m your personal editor,<br> ready to cut out all those<br> toxic people's from our life💗🫂
+   </h2>
+   
+  </div>
+ </div>
 
 <!-- General Popup -->
 <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden" id="generalPopup">
@@ -566,7 +579,7 @@ img {
    <label class="inline-flex items-center">
     <input class="form-checkbox" onclick="showMessage('Naane Ooti viduren🤌🏻🥰')" type="checkbox"/>
     <span class="ml-2">
-     Eat Well
+     <b>Eat Well</b>
     </span>
    </label>
   </div>
@@ -574,7 +587,7 @@ img {
    <label class="inline-flex items-center">
     <input class="form-checkbox" onclick="showMessage('Naane Thoonga Vaikuren🥰💗')" type="checkbox"/>
     <span class="ml-2">
-     Sleep Well
+     <b>Sleep Well</b>
     </span>
    </label>
   </div>
@@ -582,7 +595,7 @@ img {
    <label class="inline-flex items-center">
     <input class="form-checkbox" onclick="showMessage('Naan Thaan Irukenla💗🫂')" type="checkbox"/>
     <span class="ml-2">
-     Be Happy
+    <b>Be Happy</b>
     </span>
    </label>
   </div>

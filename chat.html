@@ -15,7 +15,7 @@
         }
         .header, .footer {
             padding: 1rem;
-            border-color: #4B5563;
+            border-color: #c4c4c4;
         }
         .header {
             display: flex;
@@ -109,33 +109,37 @@
             background-color: #2581eb;
             color: white;
         }
-        .footer {
-            display: flex;
-            align-items: center;
-            border-top-width: 0;
-            padding: 0.5rem;
-            background-color: #f0f0f0;
-            border-radius: 50px;
-            width: 380px;
-            margin-bottom: 45px;
-            margin-left: 16px;
-        }
-        .footer input {
-            flex: 1;
-            background-color: #f0f0f0;
-            color: black;
-            padding: 0.5rem 9px;
-            border-radius: 0.375rem;
-            margin-left: 0.5rem;
-        }
-        .footer .icons {
-            display: flex;
-            gap: 1rem;
-            margin-left: 1rem;
-        }
-        .footer .icons i {
-            font-size: 1.25rem;
-        }
+        .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 999; /* Ensure it overlays other content */
+    }
+
+    .popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 1000; /* Ensure it's above the overlay */
+        text-align: center;
+    }
+
+    .popup-content h2 {
+        margin: 0 0 10px;
+    }
+
+    .popup-content button {
+        margin-top: 10px;
+        padding: 5px 10px;
+    }
         /* GIF Popup Styles */
         .gif-popup {
             display: none;
@@ -169,57 +173,69 @@
     text-align: center;
     width: 300px;
 }
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+   }
+   .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+   }
+   .heart-animation {
+    animation: heartbeat 1s infinite;
+}
 
-        /* Waveform Styles */
-        .waveform {
-            display: flex;
-            align-items: flex-end;
-            margin-top: 0.5rem;
-            height: 30px;
-            gap: 2px;
+@keyframes heartbeat {
+    0%, 10% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1);
+    }
+
+    70% {
+        transform: scale(1.2);
+    }
+    90% {
+        transform: scale(1);
+    }
+}
+
+.heart-red {
+    color: red;
+}
+       /* White Flash Styles */
+       .white-flash {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            opacity: 0;
+            transition: opacity 0s ease;
+            z-index: 999; /* Ensure it's above other content */
         }
-        .waveform div {
-            width: 5px;
-            background-color: gray;
-            transition: background-color 0.1s;
-        }
-        .waveform div.active {
-            background-color: black;
-        }
-        .play-btn {
-            font-size: 1.5rem;
-            background: none;
-            border: none;
-            cursor: pointer;
-            margin-top: 0.5rem;
+        .white-flash.active {
+            opacity: 0.76;
         }
     </style>
 </head>
 <body>
-  <!-- User Profile Modal -->
-<div class="overlay" id="profileOverlay" style="display: none;"></div>
-<div class="gif-popup" id="profilePopup" style="display: none;">
-    <div class="profile-modal-content">
-        <img src="pic12.jpg" alt="Profile picture" style="width: 100px; border-radius: 50%;">
-        <h2>prince_rajesh</h2>
-        <p>Lovegram</p>
-        <p>Additional details here...</p>
-        <button onclick="closeProfilePopup()">Close</button>
-    </div>
-</div>
 
-    <div class="header">
-        <a href="messages.html">
+    <div class="header"><a href="messages.html">
         <i class="fas fa-arrow-left text-xl"></i></a>
         <img src="pic12.jpg" alt="Profile picture" style="margin-left: 13px;">
         <div class="title">
             <h1>prince_rajesh</h1>
-            <h3 style="color: #aeadad;">her prince</h3>
+     
         </div>
         <div class="icons">
-            <i class="fas fa-phone"></i>
-            <i class="fas fa-video"></i>
-            <i class="fas fa-info-circle"></i>
+            <i class="fas fa-phone" id="footerPhone"></i>
+            <i class="fas fa-video" id="footervideo"></i>
+          
         </div>
     </div>
     <div class="profile">
@@ -265,27 +281,75 @@
         </div>
     </div>
     </div>
-    <div class="footer">
-        <img src="camera (1).png" style="width: 30px;">
-        <input type="text" id="messageInput" placeholder="Message.....">
-        <div class="icons">
-            <i class="fas fa-microphone"></i>
-            <i class="fas fa-image"></i>
-            <i class="fas fa-heart"></i>
+    <div class="flex items-center p-4">
+        <input class="flex-1 bg-gray-100 text-black p-2 rounded-full" id="messageInput" placeholder="Message..." type="text"/>
+        <div class="flex space-x-4 ml-4">
+            <i class="fas fa-camera text-xl" id="footerCamera"></i>
+            <i class="fas fa-heart text-xl" id="footerHeart"></i>
         </div>
     </div>
+    
+<!-- Overlay and Popup -->
+<div class="overlay" id="popupOverlay" style="display: none;"></div>
+<div class="popup" id="phonePopup" style="display: none;">
+    <div class="popup-content">
+        <h2>Un puruchan romba paavam ma🫠</h2>
+        <p>appo appo avanuku call pannu😅💗</p>
+        <button onclick="closePhonePopup()">Okay ah</button>
+    </div>
+</div>
+<div class="overlay" id="videoPopupOverlay" style="display: none;"></div>
+<div class="popup" id="videoPopup" style="display: none;">
+    <div class="popup-content">
+        <h2>Appo appo video call um pesalaam</h2>
+        <p>thappu illa😅💗</p>
+        <button onclick="closeVideoPopup()">Seri ah</button>
+    </div>
+</div>
   
     <div class="overlay" id="overlay"></div>
     <div class="gif-popup" id="gifPopup">
         <img src="hug.gif" alt="GIF">
     </div>
-  
+    <div class="white-flash" id="whiteFlash" style="display: none;"></div>
+     <!-- Capture Sound -->
+     <audio id="captureSound" src="sound.mp3" preload="auto"></audio>
+     <script>
+        document.querySelector('.fas.fa-phone').addEventListener('click', function () {
+            document.getElementById('popupOverlay').style.display = 'block';
+            document.getElementById('phonePopup').style.display = 'block';
+        });
+    
+        function closePhonePopup() {
+            document.getElementById('popupOverlay').style.display = 'none';
+            document.getElementById('phonePopup').style.display = 'none';
+        }
+    
+        // Optional: Close the popup when clicking outside
+        document.getElementById('popupOverlay').addEventListener('click', closePhonePopup);
+    </script>
+<script>
+    document.querySelector('.fas.fa-video').addEventListener('click', function () {
+    document.getElementById('videoPopupOverlay').style.display = 'block';
+    document.getElementById('videoPopup').style.display = 'block';
+});
+
+function closeVideoPopup() {
+    document.getElementById('videoPopupOverlay').style.display = 'none';
+    document.getElementById('videoPopup').style.display = 'none';
+}
+
+// Optional: Close the popup when clicking outside
+document.getElementById('videoPopupOverlay').addEventListener('click', closeVideoPopup);
+
+</script>
     <script>
         const inputField = document.getElementById('messageInput');
         const messagesContainer = document.getElementById('messages');
+
         const gifPopup = document.getElementById('gifPopup');
         const overlay = document.getElementById('overlay');
-        let audio = new Audio('path_to_your_audio_file.mp3'); // Replace with your audio file path
+        let audio = new Audio('sound.mp3'); // Replace with your audio file path
 
         inputField.addEventListener('keydown', function(event) {
             if (event.key === 'Enter' && inputField.value.trim() !== '') {
@@ -295,13 +359,15 @@
 
                 if (userMessage.includes('ar')) {
                     triggerVoiceNote();
-                } else if (userMessage.toLowerCase() === 'love you','loveyou','Love you','LOVE YOU','LOVEYOU','love you🥰','love you💗','love you❤️','love you😘','love you🤗','Love you🥰','Love you💗','Love you❤️','Love you😘','Love you🤗') {
+                } else if (userMessage.toLowerCase() === 'love you','loveyou','Love you da','LOVE YOU ','LOVEYOU','love you🥰','love you💗','love you❤️','love you😘','love you🤗','Love you🥰','Love you💗','Love you❤️','Love you😘','Love you🤗') {
                     addTypingMessage();
                 }
             }
         });
 
         function addTypingMessage() {
+
+            
             const typingMessage = document.createElement('div');
             typingMessage.className = 'message';
             typingMessage.innerHTML = `<div class="content"><p style="color:black;">Typing...</p></div>`;
@@ -315,6 +381,8 @@
         }
 
         function addMessage(text, type) {
+
+            
             const messageDiv = document.createElement('div');
             messageDiv.className = `message ${type}`;
             if (type === 'sent') {
@@ -346,6 +414,98 @@
                 gifPopup.style.display = 'none';
             }, 5000);
         }
+        document.getElementById('messageInput').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+     const message = e.target.value;
+     const chatContainer = document.getElementById('chatContainer');
+     const profilePicSrc = document.getElementById('profilePic').src;
+
+     // Append user's message
+     const userMessageDiv = document.createElement('div');
+     userMessageDiv.classList.add('flex', 'justify-end');
+     userMessageDiv.innerHTML = `<div class="message user max-w-xs"><p>${message}</p></div>`;
+     chatContainer.appendChild(userMessageDiv);
+
+     // Scroll to the bottom
+     chatContainer.scrollTop = chatContainer.scrollHeight;
+
+     // Check for "hi" and respond with "hello"
+     if (message.toLowerCase() === 'hi') {
+      const typingDiv = document.createElement('div');
+      typingDiv.classList.add('flex', 'items-start', 'space-x-2');
+      typingDiv.innerHTML = `
+       <img alt="Profile picture" class="rounded-full w-10 h-10" height="40" src="${profilePicSrc}" width="40"/>
+       <div class="message max-w-xs">
+        <p>Typing</p>
+        <div class="typing-indicator">
+         <span></span>
+         <span></span>
+         <span></span>
+        </div>
+       </div>`;
+      chatContainer.appendChild(typingDiv);
+
+      // Scroll to the bottom
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+
+      setTimeout(() => {
+       chatContainer.removeChild(typingDiv);
+       const addMessage = document.createElement('div');
+       addMessage.classList.add('flex', 'items-start', 'space-x-2');
+       addMessage.innerHTML = `
+        <img alt="Profile picture" class="rounded-full w-10 h-10" height="40" src="${profilePicSrc}" width="40"/>
+        <div class="message max-w-xs">
+         <p>hello</p>
+        </div>`;
+       chatContainer.appendChild(addMessage);
+
+       // Scroll to the bottom
+       chatContainer.scrollTop = chatContainer.scrollHeight;
+      }, 3000);
+     }
+
+     // Clear the input
+     e.target.value = '';
+    }
+   });
+   document.getElementById('footerHeart').addEventListener('click', function () {
+        this.classList.toggle('heart-red');
+        this.classList.toggle('heart-animation');
+    });
+// Add camera flash functionality
+document.getElementById('footerCamera').addEventListener('click', function () {
+            const whiteFlash = document.getElementById('whiteFlash');
+            whiteFlash.style.display = 'block'; // Show the flash overlay
+            setTimeout(() => {
+                whiteFlash.classList.add('active'); // Start the flash animation
+            }, 10); // Delay to allow the display change to take effect
+            
+            setTimeout(() => {
+                whiteFlash.classList.remove('active'); // Remove the animation class
+                whiteFlash.style.display = 'none'; // Hide the overlay
+            }, 300); // Match the timing with the CSS transition
+        });
+        // Your existing JavaScript...
+
+        document.getElementById('footerCamera').addEventListener('click', function () {
+            const whiteFlash = document.getElementById('whiteFlash');
+            const captureSound = document.getElementById('captureSound');
+
+            // Play the capture sound
+            captureSound.play().catch(error => {
+                console.error('Audio playback failed:', error);
+            });
+
+            whiteFlash.style.display = 'block'; // Show the flash overlay
+            setTimeout(() => {
+                whiteFlash.classList.add('active'); // Start the flash animation
+            }, 10); // Delay to allow the display change to take effect
+            
+            setTimeout(() => {
+                whiteFlash.classList.remove('active'); // Remove the animation class
+                whiteFlash.style.display = 'none'; // Hide the overlay
+            }, 300); // Match the timing with the CSS transition
+        });
 
 
     </script>

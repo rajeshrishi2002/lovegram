@@ -1,9 +1,9 @@
 const image_profile = [
-    ['raguvengat.jpg', 'raguvenkat.26', 'profile.html'],
-    ['sona.jpg', ' _sona.23', 'story.html'],
-    ['varshini.jpg', 'vxrshx_10', 'home.html'],
-    ['aira.jpg', 'princess_aira', 'index.html'],
-    ['pic12.jpg', 'prince_rajesh', 'story.html'],
+    ['raguvengat.jpg', 'raguvenkat.26', 'Rstory.html'],
+    ['sona.jpg', ' _sona.23', 'Sstory.html'],
+    ['varshini.jpg', 'vxrshx_10', 'Vstory.html'],
+    ['aira.jpg', 'princess_aira', 'Astory.html'],
+    ['pic12.jpg', 'prince_rajesh', 'Pstory.html'],
 ];
 
 const story_container = document.querySelector('.owl-carousel.items');
