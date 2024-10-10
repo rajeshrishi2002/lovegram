@@ -179,10 +179,10 @@ for (var i = 0; i < explore_date.length;i++) {
 
 /*****************Reels********************/
 const reels_data = [
-  ['mine.mp4',
+  ['mine4.mp4',
   './images/profile_img.jpg',
   'nerida_princess',
-  '𝐖𝐡𝐞𝐧 𝐲𝐨𝐮𝐫 𝐡𝐞𝐚𝐫𝐭 𝐚𝐧𝐝 𝐨𝐮𝐭𝐟𝐢𝐭 𝐞𝐦𝐛𝐨𝐝𝐲 𝐩𝐮𝐫𝐞 𝐥𝐨𝐯𝐞 𝐟𝐨𝐫 𝐭𝐫𝐚𝐝𝐢𝐭𝐢𝐨𝐧𝐬✨𝐒𝐢𝐦𝐩𝐥𝐲 𝐁𝐞𝐢𝐧𝐠 𝐌𝐲𝐬𝐞𝐥𝐟❤️𝐁𝐞𝐢𝐧𝐠 𝐢𝐧 𝐥𝐨𝐯𝐞 𝐰𝐢𝐭𝐡 𝐲𝐨𝐮𝐫𝐬𝐞𝐥𝐟 𝐢𝐬 𝐭𝐡𝐞 𝐦𝐨𝐬𝐭 𝐛𝐞𝐚𝐮𝐭𝐢𝐟𝐮𝐥 𝐭𝐡𝐢𝐧𝐠❣️🌹 ',
+  '𝐈 𝐰𝐢𝐥𝐥 𝐡𝐨𝐥𝐝 𝐭𝐡𝐨𝐬𝐞 𝐦𝐞𝐦𝐨𝐫𝐢𝐞𝐬 𝐜𝐥𝐨𝐬𝐞 𝐭𝐨 𝐦𝐲 𝐡𝐞𝐚𝐫𝐭,𝐄𝐯𝐞𝐫𝐲 𝐥𝐚𝐮𝐠𝐡 𝐚𝐧𝐝 𝐬𝐦𝐢𝐥𝐞, 𝐰𝐞’𝐥𝐥 𝐧𝐞𝐯𝐞𝐫 𝐛𝐞 𝐚𝐩𝐚𝐫𝐭💗🫂',
   'Favorite Music',
   'My Heart',
   '5',
@@ -209,10 +209,10 @@ const reels_data = [
   '8',
   '13'
   ],
-  ['mine4.mp4',
+  ['mine.mp4',
  './images/profile_img.jpg',
   'nerida_princess',
-  '𝐈 𝐰𝐢𝐥𝐥 𝐡𝐨𝐥𝐝 𝐭𝐡𝐨𝐬𝐞 𝐦𝐞𝐦𝐨𝐫𝐢𝐞𝐬 𝐜𝐥𝐨𝐬𝐞 𝐭𝐨 𝐦𝐲 𝐡𝐞𝐚𝐫𝐭,𝐄𝐯𝐞𝐫𝐲 𝐥𝐚𝐮𝐠𝐡 𝐚𝐧𝐝 𝐬𝐦𝐢𝐥𝐞, 𝐰𝐞’𝐥𝐥 𝐧𝐞𝐯𝐞𝐫 𝐛𝐞 𝐚𝐩𝐚𝐫𝐭💗🫂',
+  '𝐖𝐡𝐞𝐧 𝐲𝐨𝐮𝐫 𝐡𝐞𝐚𝐫𝐭 𝐚𝐧𝐝 𝐨𝐮𝐭𝐟𝐢𝐭 𝐞𝐦𝐛𝐨𝐝𝐲 𝐩𝐮𝐫𝐞 𝐥𝐨𝐯𝐞 𝐟𝐨𝐫 𝐭𝐫𝐚𝐝𝐢𝐭𝐢𝐨𝐧𝐬✨𝐒𝐢𝐦𝐩𝐥𝐲 𝐁𝐞𝐢𝐧𝐠 𝐌𝐲𝐬𝐞𝐥𝐟❤️𝐁𝐞𝐢𝐧𝐠 𝐢𝐧 𝐥𝐨𝐯𝐞 𝐰𝐢𝐭𝐡 𝐲𝐨𝐮𝐫𝐬𝐞𝐥𝐟 𝐢𝐬 𝐭𝐡𝐞 𝐦𝐨𝐬𝐭 𝐛𝐞𝐚𝐮𝐭𝐢𝐟𝐮𝐥 𝐭𝐡𝐢𝐧𝐠❣️🌹 ',
   'Favorite Music',
   'My Heart',
   '5',
@@ -243,13 +243,13 @@ for(let i=0;i<reels_data.length;i++){
             <img src="./images/play-button-arrowhead.png" >
         </div>
         <div class="info">
-            <div class="profile">
+            <div class="profile" style="margin-bottom:-10px;">
                 <h4><a href="#">
                         <img src="${reels_data[i][1]}" >
                         ${reels_data[i][2]}
                     </a></h4>
-                <span>.</span>
-                <button class="follow_text">Follow</button>
+                <span></span>
+                <button class="follow_text"></button>
             </div>
             <div class="desc">
                 <p>${reels_data[i][3]} <span class="show_text"></span>
@@ -275,13 +275,13 @@ for(let i=0;i<reels_data.length;i++){
         <p> ${reels_data[i][6]}</p>
     </div>
     <div class="messsage">
-        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#message_modal">
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#message_modal"  style="border:none;">
             <img src="./images/commentw.png" style="width:30px;">
             <p class="m-0">${reels_data[i][7]}</p>
         </button>
     </div>
     <div class="send">
-        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#send_message_modal">
+        <button type="button" class="btn"   style="border:none;">
             <img src="./images/sharew.png" >
             <p class="m-0">${reels_data[i][8]}</p>
         </button>
@@ -310,18 +310,18 @@ for(let i=0;i<reels_data.length;i++){
               <img src="./images/play-button-arrowhead.png" >
           </div>
           <div class="info">
-              <div class="profile">
+              <div class="profile" style="margin-bottom:-10px;">
                   <h4><a href="#">
                           <img src="${reels_data[i][1]}" >
                           ${reels_data[i][2]}
                       </a></h4>
-                  <span>.</span>
-                  <button class="follow_text">Follow</button>
+                  <span></span>
+                  <button class="follow_text"></button>
               </div>
               <div class="desc">
                   <p>${reels_data[i][3]} <span class="show_text"></span>
                   </p>
-                  <div class="more" style="margin-bottom:9px;">
+                  <div class="more" style="margin-bottom:12px;">
                       <div class="music">
                           <img src="./images/music.png" >
                           <span>${reels_data[i][4]}</span>
@@ -342,13 +342,13 @@ for(let i=0;i<reels_data.length;i++){
           <p> ${reels_data[i][6]}</p>
       </div>
       <div class="messsage" style="margin-bottom:0%;">
-          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#message_modal">
+          <button type="button" class="btn"  style="border:none;">
               <img src="./images/commentw.png" style="width:30px;">
               <p class="m-0">${reels_data[i][7]}</p>
           </button>
       </div>
       <div class="send" style="margin-bottom:-1%;">
-          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#send_message_modal">
+          <button type="button" class="btn"   style="border:none;">
               <img src="./images/sharew.png" >
                 <p class="m-0">${reels_data[i][8]}</p>
           </button>
@@ -360,7 +360,7 @@ for(let i=0;i<reels_data.length;i++){
       <div class="more" style="margin-bottom:0%;">
           <img src="./images/morew.png" >
       </div>
-      <div class="profile" style="margin-bottom:60px;">
+      <div class="profile" style="margin-bottom:67px;">
           <img src="${reels_data[i][1]}" >
       </div>
   </div>`;
@@ -597,5 +597,6 @@ function completed(){
       share_btn_post.innerHTML = ""
   })
 }
+
 
 
