@@ -15,7 +15,7 @@ if (story_container) {
         // Add left margin conditionally for specific usernames
         let usernameStyle = '';
         if (image_profile[i][1] === '_sona.23' || image_profile[i][1] === 'vxrshx_10') {
-            usernameStyle = 'style="margin-left: 10px;"'; // Adjust margin as needed
+            usernameStyle = 'style="margin-left: 12px;"'; // Adjust margin as needed
         }
 
         parentDiv.innerHTML = `
